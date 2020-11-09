@@ -1,0 +1,81 @@
+==a==
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tugas4.FXMLkalkulatorController">
+    <children>
+        <Button fx:id="button" layoutX="230.0" layoutY="125.0" onAction="#handleButtonAction" text="x" />
+        <Label fx:id="label" layoutX="57.0" layoutY="94.0" minHeight="16" minWidth="69" />
+      <Button layoutX="126.0" layoutY="59.0" mnemonicParsing="false" text="1" />
+      <Button layoutX="160.0" layoutY="59.0" mnemonicParsing="false" text="2" />
+      <Button layoutX="195.0" layoutY="59.0" mnemonicParsing="false" text="3" />
+      <Button layoutX="230.0" layoutY="59.0" mnemonicParsing="false" text="4" />
+      <Button layoutX="268.0" layoutY="59.0" mnemonicParsing="false" text="5" />
+      <Button layoutX="268.0" layoutY="90.0" mnemonicParsing="false" text="6" />
+      <Button layoutX="230.0" layoutY="90.0" mnemonicParsing="false" text="7" />
+      <Button layoutX="195.0" layoutY="90.0" mnemonicParsing="false" text="8" />
+      <Button layoutX="161.0" layoutY="90.0" mnemonicParsing="false" text="9" />
+      <TextField layoutX="129.0" layoutY="24.0" />
+      <Button fx:id="button1" layoutX="195.0" layoutY="125.0" onAction="#handleButtonAction" text="-" />
+      <Button fx:id="button11" layoutX="161.0" layoutY="125.0" onAction="#handleButtonAction" text="+" />
+      <Button fx:id="button12" layoutX="267.0" layoutY="125.0" onAction="#handleButtonAction" text="/" />
+      <Button layoutX="126.0" layoutY="90.0" mnemonicParsing="false" text="0" />
+    </children>
+</AnchorPane>
+
+==b==
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package tugas4;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+/**
+ *
+ * @author Lenovo
+ */
+public class Tugas4 extends Application {
+    
+Button button0 = new Button("0");
+Button button1 = new Button("1");
+Button button2 = new Button("2");
+Button button3 = new Button("3");
+Button button4 = new Button("4");
+Button button5 = new Button("5");
+Button button6 = new Button("6");
+Button button7 = new Button("7");
+Button button8 = new Button("8");
+Button button9 = new Button("9");
+Button button = new Button("tambah");
+Button button1 = new Button("kurang");
+Button button11 = new Button("kali");
+Button button12 = new Button("bagi");
+    @Override
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLkalkulator.fxml"));
+        
+        Scene scene = new Scene(root);
+        
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
+    
+}
